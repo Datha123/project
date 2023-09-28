@@ -1,0 +1,111 @@
+<!-- views/signup.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+
+    <style>
+        /* Add CSS styles for the container */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff; /* Set background color for the body (black in this example) */
+            overflow: hidden; /* Hide overflow for video */
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(244, 241, 241, 0.7); /* Add a semi-transparent background to the form */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px; /* Set a maximum width for the container */
+            width: 100%; /* Ensure the container takes the full width within its max-width */
+            text-align: center;
+        }
+
+        /* Add more CSS styles for form elements, buttons, etc. as needed */
+
+       
+
+        h1 {
+    color: #333; /* Set text color for the heading */
+}
+
+form {
+    margin-top: 20px; /* Add space between the heading and the form */
+}
+
+label {
+    display: block; /* Display labels on separate lines */
+    margin-top: 10px; /* Add space between form elements */
+    font-weight: bold; /* Make labels bold */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 100px; /* Add space between checkbox and label text */
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Set a blue background color for the button */
+    color: #fff; /* Set text color for the button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px; /* Add space between form elements */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Change the background color on hover */
+}
+
+a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underlines on hover */
+}
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="/terms">Terms and Conditions</a></label>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    
+</body>
+</html>
